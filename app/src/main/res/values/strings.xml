@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">recyclerview-demo</string>
+    <string name="test">Test</string>
+</resources>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="bank"
+            type="com.danteyu.studio.recyclerviewDemo.model.Bank" />
+
+        <variable
+            name="viewModel"
+            type="com.danteyu.studio.recyclerviewDemo.MainViewModel" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="@{bank.isSelected}"
+            android:enabled="@{bank.enable}"
+            android:onClick="@{() -> viewModel.itemCheckAction.invoke(bank)}"
+            android:text="@{bank.bankName}" />
+    </FrameLayout>
+</layout>
