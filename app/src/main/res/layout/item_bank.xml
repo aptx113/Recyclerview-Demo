@@ -21,7 +21,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:checked="@{bank.isSelected}"
-            android:enabled="@{bank.enable}"
+            android:enabled="@{viewModel.enableUI}"
             android:onClick="@{() -> viewModel.itemCheckAction.invoke(bank)}"
             android:text="@{bank.bankName}" />
     </FrameLayout>

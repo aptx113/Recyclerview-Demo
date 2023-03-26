@@ -54,7 +54,7 @@ class MainActivity : AppCompatActivity() {
                 collectBank()
                 launch {
                     viewModel.enableUI.collect {
-                        adapter.notifyDataSetChanged()
+//                        adapter.notifyDataSetChanged()
                     }
                 }
             }
@@ -62,7 +62,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupRecyclerview() {
-        adapter = BankAdapter(viewModel)
+        adapter = BankAdapter(viewModel,this)
         binding.recyclerview.adapter = adapter
     }
 
